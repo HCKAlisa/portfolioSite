@@ -19,7 +19,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
 
     return (
         <nav>
-            <div className={`${navBarBackground} ${flexBetween} fixed top-0 z-20 w-full py-6`}>
+            <div className={`${navBarBackground} ${flexBetween} fixed top-0 z-50 w-[100vw] md:w-full py-6`}>
                 <div className={`${flexBetween} mx-auto w-5/6`}>
                     <div className={`${flexBetween} w-full gap-16`}>
                         <img src={Logo} alt="logo" className="w-10 h-10" />
@@ -56,7 +56,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
 
             {/* MOBILE MENU MODAL*/}
             {!isAboveMediumScreens && isMenuToggled && (
-                <div className="fixed right-0 bottom-0 z-20 h-full w-[300px] bg-primary-600 drop-shadow-xl">
+                <div className="fixed right-0 bottom-0 z-50 h-full w-[300px] bg-primary-600 drop-shadow-xl">
                     <div className="flex justify-end p-12">
                         <button title="Close Menu" onClick={()=> setMenuToggled(!isMenuToggled)}><XMarkIcon className="h-6 w-6 text-white"/></button>
                     </div>

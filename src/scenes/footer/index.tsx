@@ -10,13 +10,13 @@ type Props = {
 
 const Footer = ({setSelectedPage}: Props) => {
   return (
-    <footer id="contact" className="bg-primary-800 py-16">
+    <footer id="contact" className="bg-primary-800 md:py-16 py-8">
         <motion.div 
             className="justify-content mx-auto w-5/6 gap-16 md:flex items-center justify-center"
             onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
         >
             <motion.div 
-                className="mt-16 basis-1/2 md:mt-0"
+                className="md:mt-16 basis-1/2 md:mt-0"
                 initial="hidden" 
                 whileInView="visible" 
                 viewport={{once:true, amount: 0.5}} 

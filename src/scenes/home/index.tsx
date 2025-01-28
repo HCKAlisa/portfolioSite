@@ -1,4 +1,3 @@
-//import useMediaQuery from "../../hooks/useMediaQuery";
 import { SelectedPage } from "../../shared/types";
 import avatar from "@/assets/FullAvatar.png";
 import homeTitle from "@/assets/Text/NameTitle.png";
@@ -13,12 +12,11 @@ type Props = {
 }
 
 const Home = ({setSelectedPage}: Props) => {
-    {/*const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");*/}
 
   return (
-    <section id="home" className="gap-16 py-10 px-24 md:h-full md:pb-0">
+    <section id="home" className="gap-16 py-16 px-4 md:py-10 md:px-24 md:h-full md:pb-0">
         <motion.div 
-            className="flex justify-between items-center md:mt-24"
+            className="md:flex justify-between items-center md:mt-24"
             onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
             <motion.div 
@@ -32,10 +30,10 @@ const Home = ({setSelectedPage}: Props) => {
                     visible: {opacity: 1, x: 0}
                     }}
             >
-                <img src={homeTitle} alt="Alisa Chung Ki Ho" className="w-[40vw]"/>
-                <p className="text-4xl font-mono">UI Engineer | Game Programmer</p>
-                <p className="text-4xl font-mono">Front-end Developer | Web Developer</p>
-                <div className="flex gap-4 pt-10">
+                <img src={homeTitle} alt="Alisa Chung Ki Ho" className="md:w-[40vw]"/>
+                <p className="md:text-4xl font-mono">UI Engineer | Game Programmer</p>
+                <p className="md:text-4xl font-mono">Front-end Developer | Web Developer</p>
+                <div className="flex gap-4 md:pt-10">
                     <a href="https://www.linkedin.com/in/alisa-ho-chung-ki"><LinkedIn sx={{fontSize: 70}}/></a>
                     <a href="https://github.com/HCKAlisa"><GitHub sx={{fontSize: 70}}/></a>
                     <a href="https://gitlab.com/alisaho9831"><img src={GitLab} alt="" className="w-[70px] h-[70px]"/></a>
@@ -53,7 +51,7 @@ const Home = ({setSelectedPage}: Props) => {
                 visible: {opacity: 1, x: 0}
                 }}
             >
-                <img src={avatar} alt="Alisa's Avatar" className="w-[40vw]"/>
+                <img src={avatar} alt="Alisa's Avatar" className="md:w-[40vw]"/>
             </motion.div>
         </motion.div>
         

@@ -11,10 +11,10 @@ type Props = {
 
 const Experience = ({setSelectedPage}: Props) => {
   return (
-    <section id="experience" className="w-full bg-indigo-950 pt-14 pb-20">
-        <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Experience)} className='w-full flex'>
+    <section id="experience" className="w-full bg-indigo-950 md:pt-14 md:pb-20">
+        <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Experience)} className='md:w-full md:flex'>
             <motion.div
-                    className="mx-auto w-5/12"
+                    className="mx-auto md:w-5/12 w-11/12"
                     initial="hidden" 
                     whileInView="visible" 
                     viewport={{once:true, amount: 0.5}} 
@@ -28,13 +28,13 @@ const Experience = ({setSelectedPage}: Props) => {
                     <div className='bg-blue-900 px-4 py-2 rounded-lg shadow-lg shadow-blue-900/50'>
                         {Work.map((item: WorkExperienceType, index: number) => (
                         <div key={`work-${index}`} className='pb-1'>
-                            <div className='flex justify-between'>
-                                <h4 className='text-2xl font-semibold'>{item.title}</h4>
-                                <h5 className='text-xl'>{item.duration}</h5>
+                            <div className='md:flex justify-between'>
+                                <h4 className='md:text-2xl text-lg font-semibold'>{item.title}</h4>
+                                <h5 className='md:text-xl'>{item.duration}</h5>
                             </div>
-                            <div className='flex justify-between'>
-                                <h5 className='text-xl font-medium flex items-center'><img alt={item.company} src={item.icon} className="w-[2vw] pr-2"/>{item.company}</h5>
-                                <div className="flex items-center"><img alt={item.country} src={item.flag} className="w-[2vw] pr-2"/> <h5 className='text-xl'>{item.country}</h5></div>
+                            <div className='md:flex justify-between'>
+                                <h5 className='md:text-xl font-medium flex items-center'><img alt={item.company} src={item.icon} className="w-[15vw] md:w-[2vw] pr-2"/>{item.company}</h5>
+                                <div className="flex items-center"><img alt={item.country} src={item.flag} className="w-[15vw] md:w-[2vw] pr-2"/> <h5 className='md:text-xl'>{item.country}</h5></div>
                             </div>
                             
                             <ul>
@@ -52,7 +52,7 @@ const Experience = ({setSelectedPage}: Props) => {
             </motion.div>
 
             <motion.div
-                    className="mx-auto w-5/12"
+                    className="mx-auto md:w-5/12 w-11/12 py-2"
                     initial="hidden" 
                     whileInView="visible" 
                     viewport={{once:true, amount: 0.5}} 
@@ -66,13 +66,13 @@ const Experience = ({setSelectedPage}: Props) => {
                 <div className='bg-blue-900 px-4 py-2 rounded-lg shadow-lg shadow-blue-900/50'>
                     {Education.map((item: EducationType, index: number) => (
                         <div key={`work-${index}`} className='pb-2'>
-                            <div className='flex justify-between'>
-                                <h4 className='text-2xl font-semibold'>{item.title}</h4>
-                                <h5 className='text-xl'>{item.duration}</h5>
+                            <div className='md:flex justify-between'>
+                                <h4 className='md:text-2xl font-semibold'>{item.title}</h4>
+                                <h5 className='md:text-xl'>{item.duration}</h5>
                             </div>
-                            <div className='flex justify-between'>
-                            <h5 className='text-xl font-medium flex items-center'><img alt={item.school} src={item.icon} className="w-[2vw] pr-2"/>{item.school}</h5>
-                                <div className="flex items-center"><img alt={item.country} src={item.flag} className="w-[2vw] pr-2"/> <h5 className='text-xl'>{item.country}</h5></div>
+                            <div className='md:flex justify-between'>
+                            <h5 className='md:text-xl font-medium flex items-center'><img alt={item.school} src={item.icon} className="w-[15vw] md:w-[2vw] pr-2"/>{item.school}</h5>
+                                <div className="flex items-center"><img alt={item.country} src={item.flag} className="w-[15vw] md:w-[2vw] pr-2"/> <h5 className='md:text-xl'>{item.country}</h5></div>
                             </div>
                                 {item.major && (
                                     <div>
@@ -91,26 +91,26 @@ const Experience = ({setSelectedPage}: Props) => {
                 
                     <img src={skillsTitle} alt="Skills" className="h-[10vh]"/>
                     <div className='bg-blue-900 px-2 py-2 rounded-lg shadow-lg shadow-blue-900/50'>
-                        <div className='grid grid-cols-6 py-2'>
+                        <div className='grid grid-cols-4 py-2'>
                         {Skills.filter((item: SkillType) => item.category === "game").map((item: SkillType, index: number) => (
                             <div key={`skill-${index}`} className='px-2 flex flex-col items-center'>
-                                <div><img alt={item.name} src={item.image} className="w-[2vw]"/></div>
+                                <div><img alt={item.name} src={item.image} className="md:w-[2vw]"/></div>
                                 <div>{item.name}</div>
                             </div>
                         ))}
                         </div>
-                        <div className='grid grid-cols-6 py-2'>
+                        <div className='grid grid-cols-4 py-2'>
                             {Skills.filter((item: SkillType) => item.category === "web").map((item: SkillType, index: number) => (
                                 <div key={`skill-${index}`} className='px-2 flex flex-col items-center'>
-                                    <div><img alt={item.name} src={item.image} className="w-[2vw]"/></div>
+                                    <div><img alt={item.name} src={item.image} className="md:w-[2vw]"/></div>
                                     <div>{item.name}</div>
                                 </div>
                             ))}
                         </div>
-                        <div className='grid grid-cols-6 py-2'>
+                        <div className='grid grid-cols-4 py-2'>
                             {Skills.filter((item: SkillType) => item.category === "tool").map((item: SkillType, index: number) => (
                                 <div key={`skill-${index}`} className='px-2 flex flex-col items-center'>
-                                    <div><img alt={item.name} src={item.image} className="w-[2vw]"/></div>
+                                    <div><img alt={item.name} src={item.image} className="md:w-[2vw]"/></div>
                                     <div>{item.name}</div>
                                 </div>
                             ))}
