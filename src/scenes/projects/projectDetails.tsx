@@ -77,9 +77,9 @@ const ProjectDetailsComponent = () => {
                                 {detail.youtubeBanner && (
                                     <div className='md:w-1/3'>
                                         {isAboveMediumScreens ? (
-                                            <iframe width="672" height="378" src={`${detail.youtubeBanner}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${detail.youtubeId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <iframe width="672" height="378" src={`${detail.youtubeBanner}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${detail.youtubeId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                         ) : (
-                                            <iframe width="336" height="189" src={`${detail.youtubeBanner}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${detail.youtubeId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <iframe width="336" height="189" src={`${detail.youtubeBanner}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${detail.youtubeId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                         )}
                                     </div>
                                 )}
@@ -95,9 +95,9 @@ const ProjectDetailsComponent = () => {
                                         {index%2===0 && item.youtube && (
                                             <div className='md:w-1/3'>
                                                 {isAboveMediumScreens ? (
-                                                    <iframe width="480" height="271" src={`${item.youtube}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${item.youtubeId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                    <iframe width="480" height="271" src={`${item.youtube}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${item.youtubeId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                                 ):(
-                                                    <iframe width="336" height="189" src={`${item.youtube}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${item.youtubeId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                    <iframe width="336" height="189" src={`${item.youtube}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${item.youtubeId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                                 )
                                             }
                                             </div>
@@ -113,9 +113,9 @@ const ProjectDetailsComponent = () => {
                                         {index%2!==0 && item.youtube && (
                                             <div className='md:w-1/3'>
                                                 {isAboveMediumScreens ? (
-                                                <iframe width="480" height="271" src={`${item.youtube}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${item.youtubeId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <iframe width="480" height="271" src={`${item.youtube}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${item.youtubeId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                                 ) : (
-                                                <iframe width="336" height="189" src={`${item.youtube}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${item.youtubeId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <iframe width="336" height="189" src={`${item.youtube}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${item.youtubeId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                                 )}
                                                 </div>
                                         )}

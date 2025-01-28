@@ -39,7 +39,7 @@ import nextjs from "@/assets/Icons/nextjs.png"
 import nodejs from "@/assets/Icons/nodejs.png"
 import reactjs from "@/assets/Icons/reactjs.png"
 import tailwind from "@/assets/Icons/tailwind.png"
-import threejs from "@/assets/Icons/threejs.svg"
+import threejs from "@/assets/Icons/threejs.png"
 import typescript from "@/assets/Icons/typescript.png"
 import unity from "@/assets/Icons/unity.png"
 import vue from "@/assets/Icons/vue.png"
@@ -363,6 +363,30 @@ const Skills: Array<SkillType> = [
         id: "wordpress",
         name: "WordPress",
         image: wordpress,
+        category: "web"
+    },
+    {
+        id: "maya",
+        name: "Maya",
+        image: maya,
+        category: "game"
+    },
+    {
+        id: "mongodb",
+        name: "MongoDB",
+        image: mongodb,
+        category: "web"
+    },
+    {
+        id: "nextjs",
+        name: "Next.js",
+        image: nextjs,
+        category: "web"
+    },
+    {
+        id: "nodejs",
+        name: "Node.js",
+        image: nodejs,
         category: "web"
     },
 ]
