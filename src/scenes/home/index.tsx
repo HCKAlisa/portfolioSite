@@ -5,8 +5,6 @@ import GitLab from "@/assets/Icons/GitLab.png";
 import { LinkedIn, GitHub, Email} from '@mui/icons-material';
 import { motion } from 'framer-motion';
 
-
-
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
 }

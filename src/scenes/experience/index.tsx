@@ -91,7 +91,7 @@ const Experience = ({setSelectedPage}: Props) => {
                 
                     <img src={skillsTitle} alt="Skills" className="h-[10vh]"/>
                     <div className='bg-blue-900 px-2 py-2 rounded-lg shadow-lg shadow-blue-900/50'>
-                        <div className='grid grid-cols-4 py-2'>
+                        <div className='grid grid-cols-5 py-2'>
                         {Skills.filter((item: SkillType) => item.category === "game").map((item: SkillType, index: number) => (
                             <div key={`skill-${index}`} className='px-2 flex flex-col items-center'>
                                 <div><img alt={item.name} src={item.image} className="md:w-[2vw]"/></div>
@@ -99,7 +99,7 @@ const Experience = ({setSelectedPage}: Props) => {
                             </div>
                         ))}
                         </div>
-                        <div className='grid grid-cols-4 py-2'>
+                        <div className='grid grid-cols-5 py-2'>
                             {Skills.filter((item: SkillType) => item.category === "web").map((item: SkillType, index: number) => (
                                 <div key={`skill-${index}`} className='px-2 flex flex-col items-center'>
                                     <div><img alt={item.name} src={item.image} className="md:w-[2vw]"/></div>
@@ -107,7 +107,7 @@ const Experience = ({setSelectedPage}: Props) => {
                                 </div>
                             ))}
                         </div>
-                        <div className='grid grid-cols-4 py-2'>
+                        <div className='grid grid-cols-5 py-2'>
                             {Skills.filter((item: SkillType) => item.category === "tool").map((item: SkillType, index: number) => (
                                 <div key={`skill-${index}`} className='px-2 flex flex-col items-center'>
                                     <div><img alt={item.name} src={item.image} className="md:w-[2vw]"/></div>

@@ -12,7 +12,7 @@ type Props = {
 
 const ProjectOverview = ({name, engine, link, image, withDetails}: Props) => {
   const TrimmedName = name.replace(/\W/g, '');
-  const overlayStyles = `p-5 absolute z-30 flex md:h-[253.13px] md:w-[450px] flex-col items-center justify-center 
+  const overlayStyles = `p-5 absolute z-30 rounded-lg flex md:h-[253.13px] md:w-[450px] flex-col items-center justify-center 
   whitespace-normal bg-primary-100 text-center text-white opacity-0
   transition duration-500 hover:opacity-90`;
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
@@ -26,7 +26,7 @@ const ProjectOverview = ({name, engine, link, image, withDetails}: Props) => {
         {link && (<a href={link}>Learn More</a>)}
         {withDetails && (<Link to={`/project/${TrimmedName}`}>Learn More</Link>)}
       </div>
-        <img alt={`${image}`} src={image} className="md:h-[253.13px] md:w-[450px]"/>
+        <img alt={`${image}`} src={image} className="md:h-[253.13px] md:w-[450px] rounded-lg"/>
         { !isAboveMediumScreens && (
           <h4 className="font-bold text-xl">{name}</h4>
         )}

@@ -7,6 +7,8 @@ import Experience from "../experience";
 import About from "../about";
 import Hero from "../hero";
 import { SelectedPage } from "../../shared/types";
+import AnimatedAbout from "../animatedAbout";
+import Features from "../features";
 
 const Landing = () => {
     const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
@@ -31,11 +33,13 @@ const Landing = () => {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
             />
-            <Home setSelectedPage={setSelectedPage} />
-            <Hero />
+            {/*<Home setSelectedPage={setSelectedPage} />*/}
+            <Hero setSelectedPage={setSelectedPage}/>
             <Projects setSelectedPage={setSelectedPage} />
-            <About setSelectedPage={setSelectedPage} ></About>
-            <Experience setSelectedPage={setSelectedPage} />
+            {/*<About setSelectedPage={setSelectedPage} ></About>*/}
+            <AnimatedAbout setSelectedPage={setSelectedPage} />
+            <Features setSelectedPage={setSelectedPage} />
+            {/*<Experience setSelectedPage={setSelectedPage} />*/}
             <Footer setSelectedPage={setSelectedPage} />
         </div>
     )
