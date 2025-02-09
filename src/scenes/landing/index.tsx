@@ -5,6 +5,7 @@ import Projects from "../projects";
 import Footer from "../footer";
 import Experience from "../experience";
 import About from "../about";
+import Hero from "../hero";
 import { SelectedPage } from "../../shared/types";
 
 const Landing = () => {
@@ -31,6 +32,7 @@ const Landing = () => {
                 setSelectedPage={setSelectedPage}
             />
             <Home setSelectedPage={setSelectedPage} />
+            <Hero />
             <Projects setSelectedPage={setSelectedPage} />
             <About setSelectedPage={setSelectedPage} ></About>
             <Experience setSelectedPage={setSelectedPage} />
