@@ -49,6 +49,7 @@ import idostuff from "@/assets/Logo/iDoStuff.png"
 import monash from "@/assets/Logo/monash.png"
 import vfs from "@/assets/Logo/vfs.png"
 import pwc from "@/assets/Logo/pwc.png"
+import notfake from "@/assets/Logo/NotFakeLogo.png"
 import { EducationType, ProjectDetailsType, ProjectType, SkillType, WorkExperienceType } from "./types";
 
 const ProjectsOverview: Array<ProjectType> = [
@@ -393,6 +394,25 @@ const Skills: Array<SkillType> = [
 
 const Work: Array<WorkExperienceType> = [
     {
+        title: "Programmer, UI / UX Designer, UI & Technical Artist",
+        company: "!Fake Studio",
+        duration: "Jun 2024 - Dec 2024",
+        keyPoints: [
+            "Implemented Common UI to enhance user experience and scalability for future modification",
+            "Worked in both C++ and Blueprint for our UI system",
+            "Designed and created assets for the UI by using Figma",
+            "Developed menus making use of the list view to create a system that are user friendly and sped up the development process",
+            "Responsible for implementing the Front End, HUD, Popups, VFX and Shaders"
+        ],
+        skills: [
+            {id: "cpp"},
+            {id: "unreal"},
+        ],
+        country: "Vancouver",
+        flag: canada,
+        icon: notfake,
+    },
+    {
         title: "Front-end Developer",
         company: "PwC HK",
         duration: "JUL 2021 - JAN 2023",
@@ -428,7 +448,7 @@ const Work: Array<WorkExperienceType> = [
             {id: "css"},
             {id: "wordpress"},
         ],
-        country: "Australia",
+        country: "Melbourne",
         flag: australia,
         icon: idostuff,
     },

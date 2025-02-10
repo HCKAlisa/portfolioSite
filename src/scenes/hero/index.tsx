@@ -96,8 +96,7 @@ const Hero = ({setSelectedPage}: Props) => {
             )}
             <div id="video-frame" className="relative z-10 h-dvh w-screen overflow-hidden bg-blue-75">
                 <div>
-                    <div
-                        className="pc-clip-path absolute-center absolute z-50 transition-all duration-500 size-64 cursor-pointer overflow-hidden rotate-45 hover:rotate-0">
+                    <div className="pc-clip-path absolute-center absolute z-50 transition-all duration-500 size-64 cursor-pointer overflow-hidden rotate-45 hover:rotate-0">
                         <div onClick={handleMiniVdClick}
                              className="origin-center scale-50 opacity-0 rotate-45 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100 hover:rotate-0">
                             <video
@@ -141,7 +140,7 @@ const Hero = ({setSelectedPage}: Props) => {
                             <a href="https://github.com/HCKAlisa"><GitHub sx={{fontSize: 70}}/></a>
                             <a href="https://gitlab.com/alisaho9831"><img src={GitLab} alt="" className="w-[70px] h-[70px]"/></a>
                             <a href="mailto:hckalisa@gmail.com"><Email sx={{fontSize: 70}}/></a>
-                            <Button id="watch trailer" title="Watch Trailer" leftIcon={<TiLocationArrow/>}
+                            <Button id="downloadBtn" title="Download Resume" link="/resume" leftIcon={<TiLocationArrow/>}
                                 containerClass="bg-yellow-300 flex-center"/>
                         </div>
                     </div>

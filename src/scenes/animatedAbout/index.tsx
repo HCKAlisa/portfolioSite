@@ -45,7 +45,7 @@ const About = ({setSelectedPage}: Props) => {
             </div>
             <div className="h-screen w-screen" id="clip">
                 <div className="about-image">
-                    <img src={avatar} alt="Background" className="absolute left-0 top-0 size-full object-contain"/>
+                    <img src={avatar} alt="Background" className="absolute left-0 top-0 md:size-full object-contain"/>
                 </div>
             </div>
         </motion.div>

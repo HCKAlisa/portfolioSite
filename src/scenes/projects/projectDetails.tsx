@@ -36,7 +36,7 @@ const ProjectDetailsComponent = () => {
                     visible: {opacity: 1, x: 0}
                     }}
             >
-                <div className='w-11/12 md:mt-[1.4vh] mx-auto md:w-9/12 md:h-[79.5vh] overflow-y-scroll'>
+                <div className='w-[100vw] md:mt-[1.4vh] mx-auto md:w-9/12 md:h-[79.5vh] overflow-y-scroll'>
 
                 
                     <section className='md:flex flex-col justify-around'>
