@@ -84,7 +84,7 @@ const Hero = ({setSelectedPage}: Props) => {
     const getVideoSrc:(index:number)=>string = (index:number):string => `videos/game-${index}.mp4`;
 
     return (
-        <motion.div className="relative h-dvh w-screen overflow-hidden bg-indigo-950" onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
+        <motion.div id="home" className="relative h-dvh w-screen overflow-hidden bg-indigo-950" onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
             {isLoading && (
                 <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
                     <div className="three-body">
@@ -132,10 +132,10 @@ const Hero = ({setSelectedPage}: Props) => {
                 <div className="absolute left-0 top-0 z-40 size-full">
                     <div className="mt-20 px-5 sm:px-10">
                         <h1 className="special-font hero-heading ">Alisa Ho</h1>
-                        <p className="mb-5 max-64 md:w-[50dvw] special-font text-5xl">
+                        <p className="mb-5 max-64 md:w-[50dvw] special-font text-2xl md:text-5xl">
                             <b>Game</b> | <b>Web</b> | <b>Mobile</b>
                         </p>
-                        <div className="flex gap-4">
+                        <div className="grid grid-cols-4 items-center">
                             <a href="https://www.linkedin.com/in/alisa-ho-chung-ki"><LinkedIn sx={{fontSize: 70}}/></a>
                             <a href="https://github.com/HCKAlisa"><GitHub sx={{fontSize: 70}}/></a>
                             <a href="https://gitlab.com/alisaho9831"><img src={GitLab} alt="" className="w-[70px] h-[70px]"/></a>

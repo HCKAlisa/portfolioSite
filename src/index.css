@@ -85,11 +85,11 @@ body,
   }
 
   .about-subtext {
-    @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center text-base md:max-w-[55rem];
+    @apply absolute bottom-[-85dvh] md:bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center text-base md:max-w-[55rem];
   }
 
   .about-image {
-    @apply absolute left-1/2 top-0 z-20 md:h-[60vh] w-96 origin-center -translate-x-1/2 rounded-3xl md:w-[30vw];
+    @apply absolute left-1/2 top-0 z-20 md:h-[60vh] w-[90dvw] origin-center -translate-x-1/2 rounded-3xl md:w-[30vw];
   }
 
   .animated-title {

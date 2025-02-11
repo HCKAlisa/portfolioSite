@@ -3,7 +3,7 @@ import Navbar from "../navbar";
 import Projects from "../projects";
 import Footer from "../footer";
 import Experience from "../experience";
-import Hero from "../hero";
+import Home from "../hero";
 import { SelectedPage } from "../../shared/types";
 import AnimatedAbout from "../animatedAbout";
 const Landing = () => {
@@ -29,8 +29,7 @@ const Landing = () => {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
             />
-            {/*<Home setSelectedPage={setSelectedPage} />*/}
-            <Hero setSelectedPage={setSelectedPage}/>
+            <Home setSelectedPage={setSelectedPage}/>
             <Projects setSelectedPage={setSelectedPage} />
             {/*<About setSelectedPage={setSelectedPage} ></About>*/}
             <AnimatedAbout setSelectedPage={setSelectedPage} />

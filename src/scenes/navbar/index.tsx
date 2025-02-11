@@ -61,7 +61,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                         <button title="Close Menu" onClick={()=> setMenuToggled(!isMenuToggled)}><XMarkIcon className="h-6 w-6 text-white"/></button>
                     </div>
 
-                    <div className="ml-[33%] flex flex-col gap-10 text-2xl">
+                    <div className="flex flex-col gap-10 text-2xl">
                         <Link
                             page="Home"
                             selectedPage={selectedPage}
@@ -71,7 +71,7 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}: Props) => {
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />
-                        <Link page="Project"
+                        <Link page="Projects"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
                         />

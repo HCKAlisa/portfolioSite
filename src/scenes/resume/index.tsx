@@ -14,6 +14,7 @@ const Resume = () => {
                 <Link to={`/#experience`} className='px-2'>Back</Link>
             </div>
             <div className="flex justify-center">
+                { isAboveMediumScreens ? (
                 <motion.div
                     className='mx-auto md:w-11/12 md:absolute'
                     initial="hidden"
@@ -39,6 +40,21 @@ const Resume = () => {
 
                     </div>
                 </motion.div>
+                ): (
+                    <div className='w-11/12 h-[100dvh] mx-auto overflow-y-scroll'>
+                        <div className="">
+                            <div className="w-full">
+                                <h5 className=' font-medium text-center'>Game Developer</h5>
+                                <iframe src={gameCV} width="392px" height="221px"></iframe>
+                            </div>
+                            <div className="w-full">
+                                <h5 className='md:text-xl font-medium text-center'>Web Developer</h5>
+                                <iframe src={webCV} width="100%" height="100%"></iframe>
+                            </div>
+                        </div>
+
+                    </div>
+                )}
             </div>
         </div>
     )
