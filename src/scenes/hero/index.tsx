@@ -1,4 +1,4 @@
-import {MutableRefObject, useEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import Button from "../../components/Button.tsx";
 import {TiLocationArrow} from "react-icons/ti";
 import gsap from 'gsap';
@@ -21,7 +21,7 @@ const Hero = ({setSelectedPage}: Props) => {
     const [isLoading, setIsLoading] = useState(false);
     const [loadedVideos, setLoadedVideos] = useState(0);
     const totalVideos = 3;
-    const nextVdRef:MutableRefObject<null> = useRef(null);
+    const nextVdRef = useRef(null);
     const handleVideoLoad = ():void => {
         setLoadedVideos((prevIndex:number):number => prevIndex + 1);
     }
@@ -43,15 +43,20 @@ const Hero = ({setSelectedPage}: Props) => {
         if(hasClicked){
             gsap.set('#next-video', {visibility: 'visible'});
 
+            if (!nextVdRef.current)
+                return;
+
             gsap.to('#next-video', {
-                transformOrigin: 'center center',
-                scale: 1,
-                width: '100%',
-                height: '100%',
-                duration: 1,
-                ease: 'power1.inOut',
-                onStart: ()=> nextVdRef?.current.play(),
-            })
+                    transformOrigin: 'center center',
+                    scale: 1,
+                    width: '100%',
+                    height: '100%',
+                    duration: 1,
+                    ease: 'power1.inOut',
+                    // @ts-expect-error
+                    onStart: ()=> nextVdRef.current!.play(), 
+                })
+
 
             gsap.from('#current-video', {
                 transformOrigin: 'center center',
@@ -135,7 +140,7 @@ const Hero = ({setSelectedPage}: Props) => {
                         <p className="mb-5 max-64 md:w-[50dvw] special-font text-2xl md:text-5xl">
                             <b>Game</b> | <b>Web</b> | <b>Mobile</b>
                         </p>
-                        <div className="grid grid-cols-4 items-center">
+                        <div className="grid grid-cols-4 md:grid-cols-12 items-center">
                             <a href="https://www.linkedin.com/in/alisa-ho-chung-ki"><LinkedIn sx={{fontSize: 70}}/></a>
                             <a href="https://github.com/HCKAlisa"><GitHub sx={{fontSize: 70}}/></a>
                             <a href="https://gitlab.com/alisaho9831"><img src={GitLab} alt="" className="w-[70px] h-[70px]"/></a>

@@ -25,7 +25,7 @@ export const BentoTilt = ({ children, className = "" }: TiltProps) => {
     const [transformStyle, setTransformStyle] = useState("");
     const itemRef:RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null);
 
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: { clientX: number; clientY: number; }) => {
         if (!itemRef.current) return;
 
         const { left, top, width, height } =
@@ -61,9 +61,9 @@ export const BentoTilt = ({ children, className = "" }: TiltProps) => {
 export const BentoCard = ({ src, title, description, isComingSoon, link }: CardProps) => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [hoverOpacity, setHoverOpacity] = useState(0);
-    const hoverButtonRef:RefObject<HTMLInputElement> | undefined = useRef<HTMLInputElement>(null);
+    const hoverButtonRef= useRef<HTMLAnchorElement>(null);
 
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: { clientX: number; clientY: number; }) => {
         if (!hoverButtonRef.current) return;
         const rect = hoverButtonRef.current.getBoundingClientRect();
 
@@ -137,7 +137,7 @@ const Experience = ({setSelectedPage}: Props) => (
                     />
                 </BentoTilt>
 
-                <BentoTilt className="bento-tilt_1 row-span-1 md:ms-32 md:col-span-1 md:ms-0">
+                <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:ms-0">
                     <BentoCard
                         src="videos/feature-2.mp4"
                         title={
@@ -150,7 +150,7 @@ const Experience = ({setSelectedPage}: Props) => (
                     />
                 </BentoTilt>
 
-                <BentoTilt className="bento-tilt_1 row-span-1 md:ms-32 md:col-span-1 md:ms-0">
+                <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:ms-0">
                     <BentoCard
                         src="videos/feature-3.mp4"
                         title={

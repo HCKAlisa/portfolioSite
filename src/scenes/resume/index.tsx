@@ -30,11 +30,17 @@ const Resume = () => {
                         <div className="flex md:flex-row gap-2 h-full">
                             <div className="w-full">
                                 <h5 className='md:text-xl font-medium text-center'>Game Developer</h5>
-                                <iframe src={gameCV} width="100%" height="100%"></iframe>
+                                <object data={gameCV} type="application/pdf" width="100%" height="100%">
+                                    <embed src="https://drive.google.com/file/d/1weY_yj4aLds9H6T0KWwqmKxpuOC0UApV/preview?usp=sharing" width="100%" height="100%"/>
+                                </object>
+                                {/*<iframe src={gameCV} width="100%" height="100%"></iframe>*/}
                             </div>
                             <div className="w-full">
                                 <h5 className='md:text-xl font-medium text-center'>Web Developer</h5>
-                                <iframe src={webCV} width="100%" height="100%"></iframe>
+                                <object data={webCV} type="application/pdf" width="100%" height="100%">
+                                    <embed src="https://drive.google.com/file/d/1y5J13ieVp9XfNohurbkbAsQXKcNsRrqy/preview?usp=sharing" width="100%" height="100%"/>
+                                </object>
+                                {/*<iframe src={webCV} width="100%" height="100%"></iframe>*/}
                             </div>
                         </div>
 
@@ -45,11 +51,15 @@ const Resume = () => {
                         <div className="">
                             <div className="w-full">
                                 <h5 className=' font-medium text-center'>Game Developer</h5>
-                                <iframe src={gameCV} width="392px" height="221px"></iframe>
+                                <object data={gameCV} type="application/pdf" width="100%" height="600px">
+                                    <embed src="https://drive.google.com/file/d/1weY_yj4aLds9H6T0KWwqmKxpuOC0UApV/preview?usp=sharing" width="100%" height="600px"/>
+                                </object>
                             </div>
                             <div className="w-full">
                                 <h5 className='md:text-xl font-medium text-center'>Web Developer</h5>
-                                <iframe src={webCV} width="100%" height="100%"></iframe>
+                                <object data={webCV} type="application/pdf" width="100%" height="600px">
+                                    <embed src="https://drive.google.com/file/d/1y5J13ieVp9XfNohurbkbAsQXKcNsRrqy/preview?usp=sharing" width="100%" height="600px"/>
+                                </object>
                             </div>
                         </div>
 
