@@ -16,7 +16,7 @@ const About = ({setSelectedPage}: Props) => {
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.About)}
       >
-        <motion.div className="bg-primary-800 md:h-[50vh] lg:h-[80vh] flex justify-center items-center">
+        <motion.div className="bg-primary-800 md:h-[50vh] flex justify-center items-center">
             {isAboveMediumScreens && <div><img src={student} alt="About Me" className="h-[20vh]"/></div>}
           <div className="mx-8 my-auto py-4 h-1/2 md:w-1/2">
             <div><img src={aboutMeTitle} alt="About Me" className="h-[5vh] md:h-[8vh]"/></div>

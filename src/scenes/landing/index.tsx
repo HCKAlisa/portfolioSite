@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import Navbar from "../navbar";
-import Home from "../home";
 import Projects from "../projects";
 import Footer from "../footer";
 import Experience from "../experience";
-import About from "../about";
+import Home from "../hero";
 import { SelectedPage } from "../../shared/types";
-
+import AnimatedAbout from "../animatedAbout";
 const Landing = () => {
     const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
     const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
@@ -30,9 +29,10 @@ const Landing = () => {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
             />
-            <Home setSelectedPage={setSelectedPage} />
+            <Home setSelectedPage={setSelectedPage}/>
             <Projects setSelectedPage={setSelectedPage} />
-            <About setSelectedPage={setSelectedPage} ></About>
+            {/*<About setSelectedPage={setSelectedPage} ></About>*/}
+            <AnimatedAbout setSelectedPage={setSelectedPage} />
             <Experience setSelectedPage={setSelectedPage} />
             <Footer setSelectedPage={setSelectedPage} />
         </div>

@@ -1,127 +1,171 @@
+import {useState, useRef, ReactElement, RefObject} from "react";
+import { TiLocationArrow } from "react-icons/ti";
+import {SelectedPage} from "../../shared/types.ts";
 import { motion } from 'framer-motion';
-import { Work, Education, Skills } from '../../shared/data';
-import { SelectedPage, WorkExperienceType, EducationType, SkillType } from "../../shared/types";
-import professionalTitle from "@/assets/Text/ProfessionalTitle.png";
-import educationTitle from "@/assets/Text/EducationTitle.png";
-import skillsTitle from "@/assets/Text/SkillsTitle.png";
+import {Link} from "react-router-dom";
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
 }
 
-const Experience = ({setSelectedPage}: Props) => {
-  return (
-    <section id="experience" className="w-full bg-indigo-950 md:pt-14 md:pb-20">
-        <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Experience)} className='md:w-full md:flex'>
-            <motion.div
-                    className="mx-auto md:w-5/12 w-11/12"
-                    initial="hidden" 
-                    whileInView="visible" 
-                    viewport={{once:true, amount: 0.5}} 
-                    transition={{ duration: 0.5 }} 
-                    variants={{ 
-                        hidden: { opacity: 0, x: -50}, 
-                        visible: {opacity: 1, x: 0}
-                        }}
-            >
-                    <img src={professionalTitle} alt="Work Experience" className="h-[10vh]"/>
-                    <div className='bg-blue-900 px-4 py-2 rounded-lg shadow-lg shadow-blue-900/50'>
-                        {Work.map((item: WorkExperienceType, index: number) => (
-                        <div key={`work-${index}`} className='pb-1'>
-                            <div className='md:flex justify-between'>
-                                <h4 className='md:text-2xl text-lg font-semibold'>{item.title}</h4>
-                                <h5 className='md:text-xl'>{item.duration}</h5>
-                            </div>
-                            <div className='md:flex justify-between'>
-                                <h5 className='md:text-xl font-medium flex items-center'><img alt={item.company} src={item.icon} className="w-[15vw] md:w-[2vw] pr-2"/>{item.company}</h5>
-                                <div className="flex items-center"><img alt={item.country} src={item.flag} className="w-[15vw] md:w-[2vw] pr-2"/> <h5 className='md:text-xl'>{item.country}</h5></div>
-                            </div>
-                            
-                            <ul>
-                                {item.keyPoints.map((point: string, pointIndex: number) => (
-                                    <li key={`${item.company.replace(/\W/g, '')}-${pointIndex}`} className='pb-2'>- {point}</li>
-                                ))}
-                            </ul>
-                            
-                        </div>
-                        ))
-                        
-                    }
-                    </div>
-                    
-            </motion.div>
-
-            <motion.div
-                    className="mx-auto md:w-5/12 w-11/12 py-2"
-                    initial="hidden" 
-                    whileInView="visible" 
-                    viewport={{once:true, amount: 0.5}} 
-                    transition={{ duration: 0.5 }} 
-                    variants={{ 
-                        hidden: { opacity: 0, x: 50}, 
-                        visible: {opacity: 1, x: 0}
-                        }}
-            >
-                <img src={educationTitle} alt="Education" className="h-[10vh]"/>
-                <div className='bg-blue-900 px-4 py-2 rounded-lg shadow-lg shadow-blue-900/50'>
-                    {Education.map((item: EducationType, index: number) => (
-                        <div key={`work-${index}`} className='pb-2'>
-                            <div className='md:flex justify-between'>
-                                <h4 className='md:text-2xl font-semibold'>{item.title}</h4>
-                                <h5 className='md:text-xl'>{item.duration}</h5>
-                            </div>
-                            <div className='md:flex justify-between'>
-                            <h5 className='md:text-xl font-medium flex items-center'><img alt={item.school} src={item.icon} className="w-[15vw] md:w-[2vw] pr-2"/>{item.school}</h5>
-                                <div className="flex items-center"><img alt={item.country} src={item.flag} className="w-[15vw] md:w-[2vw] pr-2"/> <h5 className='md:text-xl'>{item.country}</h5></div>
-                            </div>
-                                {item.major && (
-                                    <div>
-                                        <h5>Major: {item.major}</h5>
-                                    </div>
-                                )}
-                                {item.minor && (
-                                    <div>
-                                        <h5>Minor: {item.minor}</h5>
-                                    </div>
-                                )}
-                        </div>
-                        ))
-                    }
-                </div>
-                
-                    <img src={skillsTitle} alt="Skills" className="h-[10vh]"/>
-                    <div className='bg-blue-900 px-2 py-2 rounded-lg shadow-lg shadow-blue-900/50'>
-                        <div className='grid grid-cols-4 py-2'>
-                        {Skills.filter((item: SkillType) => item.category === "game").map((item: SkillType, index: number) => (
-                            <div key={`skill-${index}`} className='px-2 flex flex-col items-center'>
-                                <div><img alt={item.name} src={item.image} className="md:w-[2vw]"/></div>
-                                <div>{item.name}</div>
-                            </div>
-                        ))}
-                        </div>
-                        <div className='grid grid-cols-4 py-2'>
-                            {Skills.filter((item: SkillType) => item.category === "web").map((item: SkillType, index: number) => (
-                                <div key={`skill-${index}`} className='px-2 flex flex-col items-center'>
-                                    <div><img alt={item.name} src={item.image} className="md:w-[2vw]"/></div>
-                                    <div>{item.name}</div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className='grid grid-cols-4 py-2'>
-                            {Skills.filter((item: SkillType) => item.category === "tool").map((item: SkillType, index: number) => (
-                                <div key={`skill-${index}`} className='px-2 flex flex-col items-center'>
-                                    <div><img alt={item.name} src={item.image} className="md:w-[2vw]"/></div>
-                                    <div>{item.name}</div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    
-                    
-            </motion.div>
-        </motion.div>
-    </section>
-  )
+type TiltProps = {
+    children?: React.ReactNode;
+    className?: string;
 }
 
-export default Experience
+type CardProps = {
+    src: string,
+    title: ReactElement,
+    description?: string,
+    isComingSoon?: boolean,
+    link: string,
+}
+
+export const BentoTilt = ({ children, className = "" }: TiltProps) => {
+    const [transformStyle, setTransformStyle] = useState("");
+    const itemRef:RefObject<HTMLInputElement> = useRef<HTMLInputElement>(null);
+
+    const handleMouseMove = (event: { clientX: number; clientY: number; }) => {
+        if (!itemRef.current) return;
+
+        const { left, top, width, height } =
+            itemRef.current.getBoundingClientRect();
+
+        const relativeX = (event.clientX - left) / width;
+        const relativeY = (event.clientY - top) / height;
+
+        const tiltX = (relativeY - 0.5) * 5;
+        const tiltY = (relativeX - 0.5) * -5;
+
+        const newTransform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(.95, .95, .95)`;
+        setTransformStyle(newTransform);
+    };
+
+    const handleMouseLeave = () => {
+        setTransformStyle("");
+    };
+
+    return (
+        <div
+            ref={itemRef}
+            className={className}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{ transform: transformStyle }}
+        >
+            {children}
+        </div>
+    );
+};
+
+export const BentoCard = ({ src, title, description, isComingSoon, link }: CardProps) => {
+    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+    const [hoverOpacity, setHoverOpacity] = useState(0);
+    const hoverButtonRef= useRef<HTMLAnchorElement>(null);
+
+    const handleMouseMove = (event: { clientX: number; clientY: number; }) => {
+        if (!hoverButtonRef.current) return;
+        const rect = hoverButtonRef.current.getBoundingClientRect();
+
+        setCursorPosition({
+            x: event.clientX - rect.left,
+            y: event.clientY - rect.top,
+        });
+    };
+
+    const handleMouseEnter = () => setHoverOpacity(1);
+    const handleMouseLeave = () => setHoverOpacity(0);
+
+    return (
+        <div className="relative size-full">
+            <video
+                src={src}
+                loop
+                muted
+                autoPlay
+                className="absolute left-0 top-0 size-full object-cover object-center"
+            />
+            <div className="relative z-10 flex size-full flex-col justify-between p-5 text-orange-100">
+                <div>
+                    <h1 className="bento-title special-font">{title}</h1>
+                    {description && (
+                        <p className="mt-3 max-w-64 text-xs md:text-base opacity-0">{description}</p>
+                    )}
+                </div>
+
+                {!isComingSoon && (
+                    <Link
+                        to={link}
+                        ref={hoverButtonRef}
+                        onMouseMove={handleMouseMove}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-orange-100 px-5 py-2 text-xs uppercase text-white"
+                    >
+                        {/* Radial gradient hover effect */}
+                        <div
+                            className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
+                            style={{
+                                opacity: hoverOpacity,
+                                background: `radial-gradient(100px circle at ${cursorPosition.x}px ${cursorPosition.y}px, #656fe288, #00000026)`,
+                            }}
+                        />
+                        <TiLocationArrow className="relative z-20" />
+                        <p className="relative z-20">Learn More</p>
+                    </Link>
+                )}
+            </div>
+        </div>
+    );
+};
+
+const Experience = ({setSelectedPage}: Props) => (
+    <section id="experience" className="bg-indigo-950 md:py-36">
+        <motion.div className="container mx-auto px-3 md:px-10" onViewportEnter={() => setSelectedPage(SelectedPage.Experience)}>
+
+            <div className="grid w-full grid-cols-2 grid-rows-2 gap-7">
+                <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
+                    <BentoCard
+                        src="videos/feature-1.mp4"
+                        title={
+                            <>
+                                e<b>xpe</b>rie<b>n</b>ce
+                            </>
+                        }
+                        description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
+                        link="/experience"
+                    />
+                </BentoTilt>
+
+                <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:ms-0">
+                    <BentoCard
+                        src="videos/feature-2.mp4"
+                        title={
+                            <>
+                                <b>e</b>duc<b>at</b>io<b>n</b>
+                            </>
+                        }
+                        description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
+                        link="/education"
+                    />
+                </BentoTilt>
+
+                <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:ms-0">
+                    <BentoCard
+                        src="videos/feature-3.mp4"
+                        title={
+                            <>
+                                s<b>k</b>ills
+                            </>
+                        }
+                        description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
+                        link="/education"
+                    />
+                </BentoTilt>
+
+            </div>
+        </motion.div>
+    </section>
+);
+
+export default Experience;

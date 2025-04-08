@@ -25,8 +25,9 @@ const ProjectDetailsComponent = () => {
                     <ArrowLeftIcon className='w-4'/>
                     <Link to={`/`} className='px-2'>Back</Link>
                 </div>
+            {isAboveMediumScreens ? (
             <motion.div 
-                className='mx-auto md:w-11/12 md:absolute '
+                className='mx-auto w-full md:w-11/12 md:absolute'
                 initial="hidden" 
                 whileInView="visible" 
                 viewport={{once:true, amount: 0.5}} 
@@ -36,12 +37,10 @@ const ProjectDetailsComponent = () => {
                     visible: {opacity: 1, x: 0}
                     }}
             >
-                <div className='w-11/12 md:mt-[1.4vh] mx-auto md:w-9/12 md:h-[79.5vh] overflow-y-scroll'>
-
-                
+                <div className='w-[100vw] md:mt-[1.4vh] mx-auto md:w-9/12 md:h-[79.5vh] overflow-y-scroll'>
                     <section className='md:flex flex-col justify-around'>
                         <div className='md:flex justify-around items-center py-6'>
-                            <div className='md:w-3/5'>
+                            <div className='w-full md:w-3/5'>
                                 <h1 className='text-xl md:text-5xl font-bold'>{detail.name}</h1>
                                 {detail.position && (<h3 className='text-lg md:text-xl'>{detail.position}</h3>)}
                                 {detail.engine && (<h6 className='text-lg'>{detail.engine}</h6>)}
@@ -123,8 +122,75 @@ const ProjectDetailsComponent = () => {
                                 ))}
                     </section>
                 </div>
-                
             </motion.div>
+                ) : (
+                        <div className='w-[95vw] mx-auto overflow-y-scroll'>
+                            <section className=''>
+                                <div className='py-6'>
+                                    <div className='w-full'>
+                                        <h1 className='text-xl md:text-5xl font-bold'>{detail.name}</h1>
+                                        {detail.position && (<h3 className='text-lg md:text-xl'>{detail.position}</h3>)}
+                                        {detail.engine && (<h6 className='text-lg'>{detail.engine}</h6>)}
+                                        <div className='flex gap-2 py-4'>
+                                            {getIntersection(Skills, detail.skills).map((item: SkillType, index: number) => (
+                                                <Skill
+                                                    key={`${item.name}-${index}`}
+                                                    name={item.name}
+                                                    image={item.image}
+                                                ></Skill>
+                                            ))}
+                                        </div>
+                                        <div className=''>
+                                            {detail.banner && (<img src={detail.banner} alt={detail.name} className='' />)}
+                                            {detail.youtubeBanner && (
+                                                <div className='md:w-1/3'>
+                                                    <iframe width="392" height="221" src={`${detail.youtubeBanner}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${detail.youtubeId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                                                </div>
+                                            )}
+                                        </div>
+                                        <p className='text-sm'>{detail.description}</p>
+                                        <div className='py-2'>
+                                            {detail.shippedLink && (
+                                                <div className='flex gap-2'>
+                                                    <p className='font-semibold'>Shipped Build:</p>
+                                                    <a href={detail.shippedLink} className='underline'>{detail.shippedLink}</a>
+                                                </div>
+                                            )}
+                                            {detail.gitLink && (
+                                                <div className='flex gap-2'>
+                                                    <p className='font-semibold'>Git:</p>
+                                                    <a href={detail.gitLink} className='underline'>{detail.gitLink}</a>
+                                                </div>
+                                            )}
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </section>
+
+                            <section id='features'>
+                                <h2 className='flex justify-center text-xl md:text-3xl font-bold text-center pb-4'>Key Features</h2>
+                                {detail.features.map((item: FeatureType, index: number)=> (
+                                    <div key={`${item.title}-${index}`} className='md:flex justify-center items-center py-2 gap-20'>
+                                        {item.image && (<img src={item.image} alt="" className='md:w-1/3'/>)}
+                                        {item.youtube && (
+                                            <div className='md:w-1/3'>
+                                                    <iframe width="392" height="221" src={`${item.youtube}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${item.youtubeId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                                            </div>
+                                        )}
+                                        <div className='flex flex-col md:w-5/12'>
+                                            <h5 className='text-lg font-semibold'>{item.title}</h5>
+                                            <p className="text-sm">{item.description}</p>
+                                            {item.link && (
+                                                <a href={item.link} className='underline'>More Information</a>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))}
+                            </section>
+                        </div>
+                )}
         </div>
     )
 }

@@ -16,7 +16,7 @@ const Projects = ({setSelectedPage}: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
 
   return (
-    <section id="projects" className="w-full bg-indigo-950 pt-4 pb-4 md:pt-14 md:pb-20">
+    <section id="projects" className="w-full min-h-screen bg-indigo-950 pt-4 pb-4 md:pt-24 md:pb-24">
         <motion.div
             onViewportEnter={() => setSelectedPage(SelectedPage.Projects)}
         >
@@ -31,9 +31,9 @@ const Projects = ({setSelectedPage}: Props) => {
                     visible: {opacity: 1, x: 0}
                     }}
             >
-                <div className="md:w-4/5">
+                <div className="">
                     <img src={projectsTitle} alt="Projects" className="h-[8vh] md:h-[10vh]"/>
-                    <p className="py-5 md:text-2xl">Following projects showcases my skills and experience through real-world examples of my work.</p>
+                    <p className="py-4 md:text-xl">Following projects showcases my skills and experience through real-world examples of my work.</p>
                     <img src={gameTitle} alt="Projects" className="h-[5vh]"/>
                 </div>
             </motion.div>
