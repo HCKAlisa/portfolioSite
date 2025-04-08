@@ -2,7 +2,7 @@ import {ArrowLeftIcon} from "@heroicons/react/24/solid";
 import {Link} from "react-router-dom";
 import {motion} from "framer-motion";
 import gameCV from "../../assets/documents/AlisaHo_GameDev_CV.pdf"
-import webCV from "../../assets/documents/AlisaHo_webDev_CV.pdf"
+import webCV from "../../assets/documents/AlisaHo_Resume_WebDeveloper.pdf"
 import useMediaQuery from "../../hooks/useMediaQuery.ts";
 
 const Resume = () => {
@@ -38,7 +38,7 @@ const Resume = () => {
                             <div className="w-full">
                                 <h5 className='md:text-xl font-medium text-center'>Web Developer</h5>
                                 <object data={webCV} type="application/pdf" width="100%" height="100%">
-                                    <embed src="https://drive.google.com/file/d/1y5J13ieVp9XfNohurbkbAsQXKcNsRrqy/preview?usp=sharing" width="100%" height="100%"/>
+                                    <embed src="https://drive.google.com/file/d/1oYZ3oSH-Wqo8fOU3WrB9rhOS0UU-TvED/preview?usp=sharing" width="100%" height="100%"/>
                                 </object>
                                 {/*<iframe src={webCV} width="100%" height="100%"></iframe>*/}
                             </div>

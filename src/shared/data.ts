@@ -50,9 +50,18 @@ import monash from "@/assets/Logo/monash.png"
 import vfs from "@/assets/Logo/vfs.png"
 import pwc from "@/assets/Logo/pwc.png"
 import notfake from "@/assets/Logo/NotFakeLogo.png"
+import floralia from "@/assets/Logo/floralia.png"
+import floraliaCMS from "@/assets/Projects/floraliaCMS.png"
 import { EducationType, ProjectDetailsType, ProjectType, SkillType, WorkExperienceType } from "./types";
 
 const ProjectsOverview: Array<ProjectType> = [
+    {
+        name: "Floralia Games CRM",
+        category:"web",
+        engine: "React.js + TypeScript + Node.js + MongoDB",
+        link: "https://www.floraliagames.com/",
+        image: floraliaCMS,
+    },
     {
         name: "Harvest Onslaught",
         category: "game",
@@ -393,6 +402,29 @@ const Skills: Array<SkillType> = [
 ]
 
 const Work: Array<WorkExperienceType> = [
+    {
+        title: "Freelance Fullstack Developer",
+        company: "Floralia Games",
+        duration: "JAN 2025 - CURRENT",
+        keyPoints: [
+            "Successfully launched a content management system that allows the company owners to create and modify website content on the company website",
+            "Effectively addressed the client's needs by customising the design of the content management system, allowing them to promote new games quickly after announcement and leading to a 70% increase in funding on Kickstarter.",
+        ],
+        skills: [
+            {id: "react"},
+            {id: "typescript"},
+            {id: "mongodb"},
+            {id: "nodejs"},
+            {id: "tailwind"},
+            {id: "html"},
+            {id: "css"},
+            {id: "git"},
+
+        ],
+        country: "Vancouver",
+        flag: canada,
+        icon: floralia,
+    },
     {
         title: "Programmer, UI / UX Designer, UI & Technical Artist",
         company: "!Fake Studio",

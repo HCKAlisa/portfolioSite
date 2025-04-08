@@ -32,7 +32,7 @@ const WorkExperience = () => {
                 <div className='w-11/12 md:mt-[2vh] mx-auto md:w-3/4 md:h-[79vh] overflow-y-scroll'>
                     <img src={professionalTitle} alt="Work Experience" className="h-[8vh]"/>
                     {Work.map((item: WorkExperienceType, index: number) => (
-                        <div key={`work-${index}`} className='py-2'>
+                        <div key={`work-${index}`} className='p-4 rounded-lg bg-blue-400/30 my-2 shadow'>
                             <div className='md:flex justify-between'>
                                 <h4 className='md:text-2xl text-lg font-semibold'>{item.title}</h4>
                                 <h5 className='md:text-xl'>{item.duration}</h5>
