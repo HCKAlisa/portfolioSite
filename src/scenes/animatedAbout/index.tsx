@@ -38,9 +38,9 @@ const About = ({setSelectedPage}: Props) => {
         <motion.div id="about" className="min-h-screen w-screen bg-primary-800" onViewportEnter={() => setSelectedPage(SelectedPage.About)}>
             <div className="relative mb-8 pt-36 flex flex-col items-center gap-5">
                 <h2 className="font-general text-sm uppercase md:text-lg">Alisa Chung Ki Ho</h2>
-                <AnimatedTitle title="UI Engineer &#183 Game Programmer <br />Front-end Developer &#183 Web Developer" containerClass="mt-5 text-center"/>
+                <AnimatedTitle title="Fullstack Engineer &#183 Web Developer<br />UI Engineer &#183 Gameplay Programmer" containerClass="mt-5 text-center"/>
                 <div className="about-subtext">
-                    <p>Self-motivated and versatile UI Engineer with a year of game development experience and over 2 years of responsive web development experience.Passionate about leveraging technology to solve everyday problems and tackle challenges, seeking to join a dynamic and high-energy environment with an innovative team focused on achieving creative goals.</p>
+                    <p>Self-motivated and versatile Software Engineer with over 3 years of responsive web development experience and a year of game development experience.Passionate about leveraging technology to solve everyday problems and tackle challenges, seeking to join a dynamic and high-energy environment with an innovative team focused on achieving creative goals.</p>
                 </div>
             </div>
             <div className="h-screen w-screen" id="clip">

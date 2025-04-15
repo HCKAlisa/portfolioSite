@@ -39,7 +39,7 @@ const Projects = ({setSelectedPage}: Props) => {
             </motion.div>
 
             { isAboveMediumScreens && (
-                <div className="mx-auto mt-5 w-5/6 overflow-x-auto overflow-y-hidden">
+                <div className="mx-auto mt-5 w-5/6 overflow-x-scroll overflow-y-hidden">
                     <ul className="whitespace-nowrap">
                         {ProjectsOverview.filter((item: ProjectType) => item.category === "game").map((item: ProjectType, index: number) => (
                             <ProjectOverviewComponent
@@ -100,7 +100,7 @@ const Projects = ({setSelectedPage}: Props) => {
             </motion.div>
 
             { isAboveMediumScreens && (
-                <div className="mx-auto mt-5 w-5/6 overflow-x-auto overflow-y-hidden">
+                <div className="mx-auto mt-5 w-5/6 overflow-x-scroll overflow-y-hidden">
                     <ul className="whitespace-nowrap">
                         {ProjectsOverview.filter((item: ProjectType) => item.category === "web").map((item: ProjectType, index: number) => (
                             <ProjectOverviewComponent

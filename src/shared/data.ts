@@ -52,6 +52,8 @@ import pwc from "@/assets/Logo/pwc.png"
 import notfake from "@/assets/Logo/NotFakeLogo.png"
 import floralia from "@/assets/Logo/floralia.png"
 import floraliaCMS from "@/assets/Projects/floraliaCMS.png"
+import aiembedded from "@/assets/Projects/AIEmbedded.png"
+import runawayboba from "@/assets/Projects/runawayboba.png"
 import { EducationType, ProjectDetailsType, ProjectType, SkillType, WorkExperienceType } from "./types";
 
 const ProjectsOverview: Array<ProjectType> = [
@@ -77,6 +79,13 @@ const ProjectsOverview: Array<ProjectType> = [
         withDetails: true,
     },
     {
+        name: "Runaway Boba!",
+        category: "game",
+        engine: "Unreal Engine 5",
+        image: runawayboba,
+        link: "https://ab5olutezero.itch.io/runawayboba",
+    },
+    {
         name: "Gacha Game Demo",
         category:"game",
         engine: "Unreal Engine 5",
@@ -89,6 +98,13 @@ const ProjectsOverview: Array<ProjectType> = [
         engine: "React.js + TypeScript",
         link: "https://gitlab.com/alisaho9831/portfoliov2",
         image: portfoliov2,
+    },
+    {
+        name: "AI Embedded Website",
+        category:"web",
+        engine: "React.js + TypeScript + Node.js + TensorFlow.js",
+        link: "https://github.com/HCKAlisa/AI-Embedded.git",
+        image: aiembedded,
     },
     {
         name: "Digiqal Company Website",
