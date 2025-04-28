@@ -45,7 +45,7 @@ const Footer = ({setSelectedPage}: Props) => {
                 <h1 className="text-2xl"><Email/>  hckalisa@gmail.com</h1>
                 <div className="flex gap-4">
                     <a href="https://www.linkedin.com/in/alisa-ho-chung-ki"><LinkedIn sx={{fontSize: 50}}/></a>
-                    <a href="https://github.com/PG26Alisa"><GitHub sx={{fontSize: 50}}/></a>
+                    <a href="https://github.com/HCKAlisa"><GitHub sx={{fontSize: 50}}/></a>
                     <a href="https://gitlab.com/alisaho9831"><img src={GitLab} alt="" className="w-[50px] h-[50px]"/></a>
                     <a href="mailto:hckalisa@gmail.com"><Email sx={{fontSize: 50}}/></a>
                 </div>

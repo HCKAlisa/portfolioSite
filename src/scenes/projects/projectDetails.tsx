@@ -97,8 +97,7 @@ const ProjectDetailsComponent = () => {
                                                     <iframe width="480" height="271" src={`${item.youtube}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${item.youtubeId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                                 ):(
                                                     <iframe width="336" height="189" src={`${item.youtube}=hd1080&controls=0&autoplay=1&mute=1&loop=1&playlist=${item.youtubeId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                                                )
-                                            }
+                                                )}
                                             </div>
                                         )}
                                         <div className='flex flex-col md:w-5/12'>
