@@ -19,7 +19,6 @@ export const BentoCard = ({ src, title, description, isComingSoon, link }: CardP
     const [hoverOpacity, setHoverOpacity] = useState(0);
     const hoverButtonRef= useRef<HTMLAnchorElement>(null);
     const {isOpen, onOpen, onClose} = useDisclosure();
-    const [modal, setModal] = useState("");
 
     const handleMouseMove = (event: { clientX: number; clientY: number; }) => {
         if (!hoverButtonRef.current) return;
@@ -34,10 +33,6 @@ export const BentoCard = ({ src, title, description, isComingSoon, link }: CardP
     const handleMouseEnter = () => setHoverOpacity(1);
     const handleMouseLeave = () => setHoverOpacity(0);
 
-    const handleOpen = (modal: string) => {
-        setModal(modal);
-        onOpen();
-    };
 
     return (
         <div className="relative size-full">
@@ -62,7 +57,7 @@ export const BentoCard = ({ src, title, description, isComingSoon, link }: CardP
                             onMouseMove={handleMouseMove}
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
-                            onPress={() => handleOpen(link)}
+                            onPress={onOpen}
                             className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-orange-100 px-5 py-2 text-xs uppercase text-white"
                         >
                             {/* Radial gradient hover effect */}

@@ -8,7 +8,7 @@ import useMediaQuery from "../../hooks/useMediaQuery.ts";
 const Resume = () => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
     return (
-        <div className='w-[100vw] md:w-full md:h-full bg-primary-800 md:bg-pc-background md:bg-contain md:bg-center md:bg-no-repeat'>
+        <div className='w-[100dvw] md:w-full md:h-full bg-primary-800'>
             <div className='flex underline justify-end pt-[4vh] mr-[10vw]'>
                 <ArrowLeftIcon className='w-4'/>
                 <Link to={`/#experience`} className='px-2'>Back</Link>
