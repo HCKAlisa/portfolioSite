@@ -54,6 +54,7 @@ import floralia from "@/assets/Logo/floralia.png"
 import floraliaCMS from "@/assets/Projects/floraliaCMS.png"
 import aiembedded from "@/assets/Projects/AIEmbedded.png"
 import runawayboba from "@/assets/Projects/runawayboba.png"
+import yumegotchi from "@/assets/Projects/yumegotchi.png";
 import { EducationType, ProjectDetailsType, ProjectType, SkillType, WorkExperienceType } from "./types";
 
 const ProjectsOverview: Array<ProjectType> = [
@@ -63,6 +64,13 @@ const ProjectsOverview: Array<ProjectType> = [
         engine: "React.js, TypeScript, Node.js, Express.js, MongoDB",
         link: "https://www.floraliagames.com/",
         image: floraliaCMS,
+    },
+    {
+        name: "Yumegotchi",
+        category:"web",
+        engine: "React.js, TypeScript, Node.js, Express.js, MongoDB",
+        link: "https://yumegotchi-cc2d0.uc.r.appspot.com/",
+        image: yumegotchi,
     },
     {
         name: "Harvest Onslaught",
