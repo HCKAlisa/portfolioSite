@@ -55,6 +55,7 @@ import floraliaCMS from "@/assets/Projects/floraliaCMS.png"
 import aiembedded from "@/assets/Projects/AIEmbedded.png"
 import runawayboba from "@/assets/Projects/runawayboba.png"
 import yumegotchi from "@/assets/Projects/yumegotchi.png";
+import bloomtale from "@/assets/Projects/bloomtale.png";
 import { EducationType, ProjectDetailsType, ProjectType, SkillType, WorkExperienceType } from "./types";
 
 const ProjectsOverview: Array<ProjectType> = [
@@ -66,10 +67,17 @@ const ProjectsOverview: Array<ProjectType> = [
         image: floraliaCMS,
     },
     {
-        name: "Yumegotchi",
+        name: "BloomTale",
+        category:"game",
+        engine: "Unity",
+        link: "https://store.steampowered.com/app/3168520/BloomTale/",
+        image: bloomtale,
+    },
+    {
+        name: "Dreavo",
         category:"web",
         engine: "React.js, TypeScript, Node.js, Express.js, MongoDB",
-        link: "https://yumegotchi-cc2d0.uc.r.appspot.com/",
+        link: "https://dreavo.vercel.app/",
         image: yumegotchi,
     },
     {
@@ -427,16 +435,20 @@ const Skills: Array<SkillType> = [
 
 const Work: Array<WorkExperienceType> = [
     {
-        title: "Freelance Fullstack Developer",
+        title: "Software Engineer",
         company: "Floralia Games",
-        duration: "JAN 2025 - CURRENT",
+        duration: "FEB 2025 - CURRENT",
         keyPoints: [
-            "Successfully launched a content management system that allows the company owners to create and modify website content on the company website",
-            "Effectively addressed the client's needs by customising the design of the content management system, allowing them to promote new games quickly after announcement and leading to a 70% increase in funding on Kickstarter.",
+            "Built dynamic, responsive web applications using React.js and TypeScript, improving page load speed by 1.5s and boosting mobile user engagement by 25%.",
+            "Developed and integrated RESTful APIs with a MERN stack backend (MongoDB, Express.js, Node.js), reducing manual data entry by 15%.",
+            "Set up a CI/CD pipeline to automate builds and deployments, streamlining release processes and reducing manual deployment errors.",
+            "Extended game development tools with C# scripting for automation and data handling, reducing manual steps by 30%."
         ],
         skills: [
             {id: "react"},
             {id: "typescript"},
+            {id: "unity"},
+            {id: "csharp"},
             {id: "mongodb"},
             {id: "nodejs"},
             {id: "tailwind"},
@@ -473,10 +485,10 @@ const Work: Array<WorkExperienceType> = [
         company: "PwC HK",
         duration: "JUL 2021 - JAN 2023",
         keyPoints: [
-            "Developed a new company website in Vue within a tight time frame in order to allow our marketing team to introduce our new start-up to other business partners",
-            "Helped to customize the front-end of our company’s low code platform to meet our clients’ needs",
-            "Built internal platforms for teams and departments to share reusable components, design materials and other valuable resources which decreased rework rate and improved internal communication",
-            "Created test scripts for automation testing which reduced time for manual testing and improved testing accuracy"
+            "Developed a reusable UI component library in HTML, CSS, Vue.js and JavaScript, significantly reducing incoming tickets requesting repetitive components by 33%.",
+            "Integrated components with RESTful APIs and collaborated with the backend team using MongoDB/NoSQL, ensuring smooth data flow and reducing post-release bugs by 10%.",
+            "Introduced automated browser testing with Cypress, validating critical user flows and reducing post-release defects by 20%.",
+            "Improved the user-facing tools by collaborating with artists, designers, and QA across regions to debug and polish features, resulting in a 10% reduction in post-release bugs."
         ],
         skills: [
             {id: "vue"},
