@@ -1,11 +1,8 @@
 import {useEffect, useRef, useState} from "react";
-import Button from "../../components/Button.tsx";
-import {TiLocationArrow} from "react-icons/ti";
 import gsap from 'gsap';
 import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/all";
 import {Email, GitHub, LinkedIn} from "@mui/icons-material";
-import GitLab from "@/assets/Icons/GitLab.png";
 import {SelectedPage} from "../../shared/types.ts";
 import { motion } from 'framer-motion';
 
@@ -103,7 +100,7 @@ const Hero = ({setSelectedPage}: Props) => {
                 <div>
                     <div className="pc-clip-path absolute-center absolute z-50 transition-all duration-500 size-64 cursor-pointer overflow-hidden rotate-45 hover:rotate-0">
                         <div onClick={handleMiniVdClick}
-                             className="origin-center scale-50 opacity-0 rotate-45 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100 hover:rotate-0">
+                            className="origin-center scale-50 opacity-0 rotate-45 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100 hover:rotate-0">
                             <video
                                 ref={nextVdRef}
                                 src={getVideoSrc(upcomingVideoIndex)}
@@ -141,12 +138,11 @@ const Hero = ({setSelectedPage}: Props) => {
                             <b>Game</b> | <b>Web</b> | <b>Mobile</b>
                         </p>
                         <div className="grid grid-cols-4 md:grid-cols-12 items-center">
-                            <a href="https://www.linkedin.com/in/alisa-ho-chung-ki"><LinkedIn sx={{fontSize: 70}}/></a>
+                            <a href="https://www.linkedin.com/in/alisa-hck"><LinkedIn sx={{fontSize: 70}}/></a>
                             <a href="https://github.com/HCKAlisa"><GitHub sx={{fontSize: 70}}/></a>
-                            <a href="https://gitlab.com/alisaho9831"><img src={GitLab} alt="" className="w-[70px] h-[70px]"/></a>
                             <a href="mailto:hckalisa@gmail.com"><Email sx={{fontSize: 70}}/></a>
-                            <Button id="downloadBtn" title="Download Resume" link="/resume" leftIcon={<TiLocationArrow/>}
-                                containerClass="bg-yellow-300 flex-center"/>
+                            {/* <Button id="downloadBtn" title="Download Resume" link="/resume" leftIcon={<TiLocationArrow/>}
+                                containerClass="bg-yellow-300 flex-center"/> */}
                         </div>
                     </div>
                 </div>
